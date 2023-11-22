@@ -9,7 +9,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - D:/Docker/posgresql/data:/var/lib/postgresql/data
+      - posgresql_data:/var/lib/postgresql/data
 
   pg-admin:
     image: dpage/pgadmin4:6
@@ -20,3 +20,6 @@ services:
 
     ports:
       - "5050:5050"
+volumes:
+  posgresql_data:
+    external: true
