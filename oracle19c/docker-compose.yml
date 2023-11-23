@@ -12,7 +12,7 @@ services:
       - "8081:8081"
     volumes:
       # - D:/Docker/oracle19c/data:/opt/oracle/oradata
-      - ms_sql_data:/opt/oracle/oradata
+      - oracle_data:/opt/oracle/oradata
 volumes:
-  ms_sql_data:
+  oracle_data:
     external: true

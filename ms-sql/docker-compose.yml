@@ -9,4 +9,8 @@ services:
     ports:
       - "1433:1433"
     volumes:
-      - D:/Docker/ms-sql/data:/var/opt/mssql
+      #- D:/Docker/ms-sql/data:/var/opt/mssql
+      - ms_sql_data:/var/opt/mssql
+volumes:
+  ms_sql_data:
+    external: true
